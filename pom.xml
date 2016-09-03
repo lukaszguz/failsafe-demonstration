@@ -77,9 +77,14 @@
 					</execution>
 				</executions>
 				<configuration>
-					<addTestSources>
-						<testSources>"${project.basedir}/src/test/**/*.groovy"</testSources>
-					</addTestSources>
+					<testSources>
+						<testSource>
+							<directory>${project.basedir}/src/test/java</directory>
+							<includes>
+								<include>**/*.groovy</include>
+							</includes>
+						</testSource>
+					</testSources>
 				</configuration>
 			</plugin>
 
